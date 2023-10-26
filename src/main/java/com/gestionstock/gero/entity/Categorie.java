@@ -25,10 +25,10 @@ public class Categorie {
     @JoinColumn(name = "categorie_id")
     private List<Article> article;*/
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date CreatedDate;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date ModifiedDate;
 
 

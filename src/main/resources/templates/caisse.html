@@ -113,20 +113,12 @@
               <input style="margin-left : 17px;" type="number" id="qte" class="form-control" th:field="*{qte}">
             </div>
           </div>
-
         </div>
 
-        <!--<div class="col-sm-3">
-          <label class="col-sm-2 col-form-label">Prix </label>
-          <div class="col-sm-8">
-            <input type="number" id="price" class="form-control" th:field="*{PrixHtlc}">
-          </div>
-        </div>-->
-
-          <div class="col-sm-3">
-            <button type="submit" class="btn btn-primary" ><i class="bi bi-check-lg"></i></button>
-            <button type="reset" class="btn btn-secondary" ><i class="ri-close-line"></i></button>
-          </div>
+        <div class="col-sm-3">
+          <button type="submit" class="btn btn-primary" ><i class="bi bi-check-lg"></i></button>
+          <button type="reset" class="btn btn-secondary" ><i class="ri-close-line"></i></button>
+        </div>
 
         </div>
       </form><!-- End General Form Elements -->
@@ -163,14 +155,6 @@
                       <td>[[${listlv.Idarticlelc.PrixVente}]]</td>
                       <td>[[${listlv.qte}]]</td>
                       <td>[[${listlv.PrixHtlc}]]</td>
-
-                      <!--<td>
-                        <div class="btn-group">
-                          <a class="btn btn-success" th:href="@{'/commandefournisseur/validate/' + ${cat.IdCommandeF}}"><i class="bi bi-check-lg"></i></a>
-                          <a class="btn btn-primary" th:href="@{'/commandefournisseur/edit/' + ${cat.IdCommandeF}}"><i class="ri-edit-line"></i></a>
-                          <a class="btn btn-danger" th:href="@{'/commandefournisseur/delete/' + ${cat.IdCommandeF}}"><i class="ri-close-line"></i></a>
-                        </div>
-                      </td>-->
                     </tr>
                   </th:block>
 

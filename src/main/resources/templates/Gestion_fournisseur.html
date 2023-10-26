@@ -132,7 +132,7 @@
           <div class="card-body" style="margin-top: 20px; margin-left: 300px; display: flex; flex-direction: row;">
 
               <div>
-                  <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#disablebackdrop">Nouveau</button>
+                  <button id="clickdate" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#disablebackdrop">Nouveau</button>
               </div>
 
               <div class="modal fade" id="disablebackdrop" tabindex="-1" data-bs-backdrop="false">
@@ -149,27 +149,27 @@
 
                                   <input type="hidden" th:field="*{IdFournisseur}">
                                   <div class="row mb-3">
-                                      <label class="col-sm-2 col-form-label">Nom </label>
-                                      <div class="col-sm-10">
+                                      <label class="col-sm-3 col-form-label">Nom </label>
+                                      <div class="col-sm-8">
                                           <input type="text" class="form-control" th:field="*{NomFournisseur}">
                                       </div>
                                   </div>
                                   <div class="row mb-3">
-                                      <label class="col-sm-2 col-form-label">Contact </label>
-                                      <div class="col-sm-10">
+                                      <label class="col-sm-3 col-form-label">Contact </label>
+                                      <div class="col-sm-8">
                                           <input type="text" class="form-control" th:field="*{ContactForunisseur}">
                                       </div>
                                   </div>
-                                  <div class="row mb-3">
-                                      <label class="col-sm-2 col-form-label">Date de creation </label>
-                                      <div class="col-sm-10">
-                                          <input type="date" class="form-control" th:field="*{CreatedDate}">
+                                  <div class="row mb-3" hidden>
+                                      <label class="col-sm-3 col-form-label">Date de creation </label>
+                                      <div class="col-sm-8">
+                                          <input id="datcc" type="text" class="form-control" th:field="*{CreatedDate}">
                                       </div>
                                   </div>
-                                  <div class="row mb-3">
-                                      <label class="col-sm-2 col-form-label">Date de modification</label>
-                                      <div class="col-sm-10">
-                                          <input type="date" class="form-control" th:field="*{ModifiedDate}">
+                                  <div class="row mb-3" hidden>
+                                      <label class="col-sm-3 col-form-label">Date de modification</label>
+                                      <div class="col-sm-8">
+                                          <input type="text" class="form-control" th:field="*{ModifiedDate}">
                                       </div>
                                   </div>
 
@@ -213,5 +213,31 @@
 
 
 </body>
+
+<script>
+
+    $(function() {
+
+        $("#clickdate").click(function() {
+
+           var d = new Date();
+           var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+           var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+           var fullDate = date+' '+hours;
+           console.log(fullDate);
+
+           $("#datcc").val(fullDate);
+
+           var dd =$("#datcc").val;
+
+           console.log(dd);
+
+        });
+
+    });
+
+
+</script>
+
 
 </html>
