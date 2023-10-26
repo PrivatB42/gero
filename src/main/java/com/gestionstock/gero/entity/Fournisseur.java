@@ -20,10 +20,10 @@ public class Fournisseur {
     @Column(nullable = false, length = 45)
     private int ContactForunisseur;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date CreatedDate;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date ModifiedDate;
 
 }

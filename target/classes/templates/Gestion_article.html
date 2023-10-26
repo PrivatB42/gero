@@ -54,6 +54,7 @@
     <script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
 
     <script src="js/main.js"></script>
+    <script src="js/caisse.js"></script>
     <link href="css/style.css" rel="stylesheet">
 
 
@@ -83,6 +84,10 @@
               <div class="card-body">
                 
                 <p style="margin-top: 20px;">Retrouver ici toutes des articles </p>
+
+                  <div th:if="${message}" class="alert alert-success text-center">
+                      [[${message}]]
+                  </div>
   
                 <!-- Table with stripped rows -->
                 <table class="table table-hover">
@@ -132,10 +137,10 @@
     </section>
 
       <div class="card">
-        <div class="card-body" style="margin-top: 20px; margin-left: 300px; display: flex; flex-direction: row;">
+        <div class="card-body" style="margin-top: 20px; margin-left: 300px;">
 
             <div>
-                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#disablebackdrop">Nouveau</button>
+                <button id="clickdate" type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#disablebackdrop">Nouveau</button>
             </div>
 
             <div class="modal fade" id="disablebackdrop" tabindex="-1" data-bs-backdrop="false">
@@ -152,65 +157,65 @@
 
                             <input type="hidden" th:field="*{IdArticle}">
                             <div class="row mb-3">
-                              <label class="col-sm-2 col-form-label">Libelle </label>
-                              <div class="col-sm-10">
-                                <input type="text" class="form-control" th:field="*{LibelleArticle}">
+                              <label class="col-sm-3 col-form-label">Libelle </label>
+                              <div class="col-sm-8">
+                                <input id="verif" type="text" class="form-control" th:field="*{LibelleArticle}">
                               </div>
                             </div>
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">Description </label>
-                                <div class="col-sm-10">
+                                <label class="col-sm-3 col-form-label">Description </label>
+                                <div class="col-sm-8">
                                     <input type="text" class="form-control" th:field="*{DescriptionArticle}">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                                <label class="col-sm-2 col-form-label">PrixAchat </label>
-                                <div class="col-sm-10">
+                                <label class="col-sm-3 col-form-label">PrixAchat </label>
+                                <div class="col-sm-8">
                                     <input type="number" class="form-control" th:field="*{PrixAchat}">
                                 </div>
                             </div>
                             <div class="row mb-3">
-                              <label class="col-sm-2 col-form-label">PrixVente</label>
-                              <div class="col-sm-10">
-                                <input type="number" class="form-control" th:field="*{PrixVente}">
+                              <label class="col-sm-3 col-form-label">PrixVente</label>
+                              <div class="col-sm-8">
+                                <input type="number" class="form-control verif" th:field="*{PrixVente}">
                               </div>
                             </div>
                             <div class="row mb-3">
-                              <label class="col-sm-2 col-form-label">Stock</label>
-                              <div class="col-sm-10">
+                              <label class="col-sm-3 col-form-label">Stock</label>
+                              <div class="col-sm-8">
                                 <input type="number" class="form-control" th:field="*{Stock}">
                               </div>
                             </div>
                             <div class="row mb-3">
+                                <label class="col-sm-3 col-form-label" >categorie</label>
+                                <div class="col-sm-8">
+                                    <select class="form-select" th:field="*{categorie}" aria-label="Default select example">
+                                        <option value="null" selected>Choisir le role</option>
+                                        <option th:each="cat : ${Listcategorie}"
+                                                th:value="${cat.IdCategorie}"
+                                                th:text="${cat.libellecategorie}"></option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="row mb-3" hidden>
                               <label class="col-sm-2 col-form-label">Date de creation</label>
                               <div class="col-sm-10">
-                                <input type="date" class="form-control" th:field="*{CreatedDate}">
+                                <input id="datcc" type="text" class="form-control" th:field="*{CreatedDate}">
                               </div>
                             </div>
-                            <div class="row mb-3">
+                            <div class="row mb-3" hidden>
                                 <label class="col-sm-2 col-form-label">date de modification</label>
                                 <div class="col-sm-10">
-                                    <input type="date" class="form-control" th:field="*{ModifiedDate}">
+                                    <input type="text" class="form-control" th:field="*{ModifiedDate}">
                                 </div>
                             </div>
 
-                            <div class="row mb-3">
-                              <label class="col-sm-2 col-form-label" >categorie</label>
-                              <div class="col-sm-10">
-                                <select class="form-select" th:field="*{categorie}" aria-label="Default select example">
-                                    <option value="null" selected>Choisir le role</option>
-                                    <option th:each="cat : ${Listcategorie}"
-                                            th:value="${cat.IdCategorie}"
-                                            th:text="${cat.libellecategorie}"></option>
-
-                                </select>
-                              </div>
-                            </div>
             
                             <div class="row mb-3 text-center">
                             
                               <div class="col-sm-10">
-                                <button type="submit" class="btn btn-primary" data-bs-dismiss="modal">Valider</button>
+                                <button id="btnverif" type="submit" class="btn btn-primary" data-bs-dismiss="modal">Valider</button>
                                 <button type="reset" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                               </div>
                             </div>
@@ -245,7 +250,39 @@
 
   <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
 
-
 </body>
+<script>
+
+    $(function() {
+
+        $("#clickdate").click(function() {
+
+           var d = new Date();
+           var date = d.getFullYear()+'-'+(d.getMonth()+1)+'-'+d.getDate();
+           var hours = d.getHours() + ":" + d.getMinutes() + ":" + d.getSeconds();
+           var fullDate = date+' '+hours;
+           console.log(fullDate);
+
+           $("#datcc").val(fullDate);
+
+           var dd =$("#datcc").val;
+
+           console.log(dd);
+
+        });
+
+        <!--$("#btnverif").click(function() {
+
+            alert("-&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;&#45;");
+            if (isEmpty($("#verif"))){
+                alert("vous avez oublié un champ");
+            }
+        });-->
+
+
+    });
+
+
+</script>
 
 </html>

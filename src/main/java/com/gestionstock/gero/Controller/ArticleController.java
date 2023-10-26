@@ -10,6 +10,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import java.util.List;
 
@@ -58,7 +59,7 @@ public class ArticleController {
     public  String articleeditpage(Model model){
         Article arti = article;
         List<Categorie> ListCategorie = categorieService.listAll();
-        model.addAttribute("article", arti);
+        model.addAttribute("article",arti);
         model.addAttribute("Listcategorie",ListCategorie);
         return "Modif_article";
     }

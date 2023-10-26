@@ -4,13 +4,58 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="5ace9647-f0d5-42c2-824f-653eb5933d6f" name="Changes" comment="">
+    <list default="true" id="5ace9647-f0d5-42c2-824f-653eb5933d6f" name="Changes" comment="first commit to my project">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/Other/PdfController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/Other/Pdfserice.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/Controller/ArticleController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/Controller/ArticleController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/Controller/VenteController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/Controller/VenteController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Article.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Article.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Categorie.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Categorie.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/CommandeFournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/CommandeFournisseur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Fournisseur.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Fournisseur.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Vente.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/gestionstock/gero/entity/Vente.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/js/caisse.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/js/caisse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Gestion_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Gestion_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Gestion_categorie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Gestion_categorie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Gestion_fournisseur.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Gestion_fournisseur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Modif_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Modif_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Modif_categorie.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Modif_categorie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Modif_fournisseur.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Modif_fournisseur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/Modif_utilisateur.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/Modif_utilisateur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/caisse.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/caisse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/commande_fournisseur.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/commande_fournisseur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/listevente.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/listevente.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/Controller/ArticleController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/Controller/ArticleController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/Controller/VenteController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/Controller/VenteController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Article.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Article.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Categorie.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Categorie.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/CommandeFournisseur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/CommandeFournisseur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Fournisseur.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Fournisseur.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Vente.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/gestionstock/gero/entity/Vente.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/caisse.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/js/caisse.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Gestion_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Gestion_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Gestion_categorie.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Gestion_categorie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Gestion_fournisseur.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Gestion_fournisseur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Modif_article.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Modif_article.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Modif_categorie.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Modif_categorie.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Modif_fournisseur.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Modif_fournisseur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/Modif_utilisateur.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/Modif_utilisateur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/caisse.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/caisse.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/commande_fournisseur.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/commande_fournisseur.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/listevente.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/listevente.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager">
+    <option name="groupingKeys">
+      <option value="directory" />
+      <option value="module" />
+    </option>
   </component>
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
@@ -47,7 +92,7 @@
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "git-widget-placeholder": "main",
     "ignore.virus.scanning.warn.message": "true",
-    "last_opened_file_path": "C:/Users/Admin/Desktop/Java/gero/src/main/resources/templates",
+    "last_opened_file_path": "C:/Users/Admin/Desktop/Java/GesttionBibiliothequeBack",
     "run.code.analysis.last.selected.profile": "pProject Default",
     "settings.editor.selected.configurable": "reference.settingsdialog.project.grazie"
   }
@@ -98,7 +143,20 @@
       <option name="presentableId" value="Default" />
       <updated>1688642464221</updated>
     </task>
+    <task id="LOCAL-00001" summary="first commit to my project">
+      <option name="closed" value="true" />
+      <created>1691973414865</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1691973414865</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="first commit to my project" />
+    <option name="LAST_COMMIT_MESSAGE" value="first commit to my project" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

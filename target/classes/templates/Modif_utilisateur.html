@@ -78,7 +78,7 @@
 
 
       <div class="card">
-        <div class="card-body" style="margin-top: 20px; margin-left: 300px; display: flex; flex-direction: row;">
+        <div class="card-body" style="margin-top: 20px; margin-left: 100px; margin-right: 100px;">
 
             <form th:action="@{/utilistateur/save}" method="post" th:object="${utilisateur}">
 
@@ -130,7 +130,6 @@
                     <label class="col-sm-2 col-form-label">Role</label>
                     <div class="col-sm-10">
                         <select class="form-select" th:field="*{Rolest}" aria-label="Default select example">
-                            <option value="null" selected>Choisir le role</option>
                             <option value="Admin">Admin</option>
                             <option value="Caissier(e)">Caissier(e)</option>
 

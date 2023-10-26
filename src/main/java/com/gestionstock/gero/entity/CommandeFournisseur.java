@@ -31,10 +31,10 @@ public class CommandeFournisseur {
     @Column(nullable = false, length = 10)
     private int Quantite;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date CreatedDate;
 
-    @DateTimeFormat(pattern="yyyy-MM-dd")
+    @DateTimeFormat(pattern="yyyy-MM-dd HH:mm:ss")
     private Date ModifiedDate;
 
 

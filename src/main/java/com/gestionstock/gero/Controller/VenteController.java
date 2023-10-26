@@ -12,6 +12,9 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 
+import java.time.ZoneId;
+import java.time.ZonedDateTime;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -73,11 +76,9 @@ public class VenteController {
                 }
             }
 
-
             if ( valeur_de_retour == 1 ){
 
                 ligne.setQte(ligneVente.getQte());
-
                 pdv = ligne.getIdarticlelc().getPrixVente();
                 qtev = ligne.getQte();
                 price = qtev * pdv;
@@ -106,11 +107,18 @@ public class VenteController {
     @PostMapping("/vente/save")
     public String Savevente(){
 
+        String timestamp = ZonedDateTime.now(ZoneId.of("Africa/Abidjan"))
+                .format(DateTimeFormatter.ofPattern("MM.dd.yyy, hh.mm.ss"));
+
         Vente ventep =  new Vente();
+        ventep.setCreatedDate(timestamp);
+        ventep.setModifiedDate(timestamp);
         ventep.setTotalprix(totalph);
         Vente vente = service.SaveVente(ventep);
         System.out.println("vente =========================================== "+vente);
         System.out.println("listv = ========||||||||||||||| == ======= == == = "+listlv);
+
+        int idpf = vente.getIdVente();
 
         for (LigneVente lv : listlv )
         {
