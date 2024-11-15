@@ -1,2 +1,3 @@
 Application  de gestion de stocks et 
-de vente avec spring boot et bootstrap
+de vente pour les PME avec spring boot et bootstrap
+Éest un MVP (produit minimum viable)
